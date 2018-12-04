@@ -369,7 +369,7 @@ def GetBackground(mineral, sigma, x_bins=None):
     
     return Nevents_BG
 
-def GetSignal(mineral, sigma, m_DM, xsec, x_bins=None):
+def GetSignal(mineral, sigma, m_DM, xsec, x_bins=None, eta=None, vel_dis=False):
     x0 = sigma/2.0
     
     x_bins_all = np.logspace(-1, 3,200)
@@ -380,7 +380,10 @@ def GetSignal(mineral, sigma, m_DM, xsec, x_bins=None):
         x_bins = calcBins(sigma)
     N_bins = len(x_bins) - 1
     
-    dRdx_sig = mineral.dRdx(x_bins_all, xsec, m_DM, gaussian=False)
+    if vel_dis:
+        dRdx_sig = mineral.dRdx(x_bins_all, xsec, m_DM, eta, gaussian=False)
+    else:
+        dRdx_sig = mineral.dRdx(x_bins_all, xsec, m_DM, gaussian=False)
     #dRdx_smooth = gaussian_filter1d(dRdx_sig,sigma, mode='constant',cval = 1e-30)
     dRdx_interp = interp1d(x_c_all, dRdx_sig, bounds_error=False, fill_value=0.0)
     
