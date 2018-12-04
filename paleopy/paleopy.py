@@ -15,7 +15,6 @@ from WIMpy import DMUtils as DMU
 import os 
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
-print(dir_path)
 
 class Mineral:
     def __init__(self, mineral):
@@ -178,6 +177,24 @@ class Mineral:
         if gaussian:
             dRdx = gaussian_filter1d(dRdx,1)+1e-20
         return dRdx*1e6*365
+
+    def dRdx_generic_vel(self, x_bins, sigma, m, eta, gaussian=False):
+        x_width = np.diff(x_bins)
+        x = x_bins[:-1] + x_width/2
+        #Returns in events/kg/Myr/nm
+
+        
+        dRdx = np.zeros_like(x)
+        for i, nuc in enumerate(self.nuclei):
+            # Ignore recoiling hydrogen nuclei
+            if (nuc != "H"):
+                Etemp = self.xtoE_nuclei[nuc](x)
+                dRdx_nuc = (DMU.dRdE_generic(Etemp, self.N_p[i], self.N_n[i], m, sigma, eta)*self.dEdx_nuclei[nuc](x))
+                dRdx += self.ratio_nuclei[nuc]*dRdx_nuc
+            
+        if gaussian:
+            dRdx = gaussian_filter1d(dRdx,1)+1e-20
+        return dRdx*1e6*365
     
     #--------------------------------
     def dRdx_nu(self,x_bins, components=False, gaussian=False):
@@ -241,7 +258,6 @@ class Mineral:
     def loadNeutronBkg(self):
         
         fname = dir_path + "/Data/" + self.name + "_ninduced_wan.dat"
-        print(fname)
 
         #Read in the column headings so you know which element is which
         f = open(fname)
