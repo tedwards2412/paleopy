@@ -15,6 +15,7 @@ from WIMpy import DMUtils as DMU
 import os 
 
 dir_path = os.path.dirname(os.path.realpath(__file__))
+print(dir_path)
 
 class Mineral:
     def __init__(self, mineral):
