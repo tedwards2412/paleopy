@@ -1,0 +1,66 @@
+ ==================================================================
+              Calculation using SRIM-2006 
+              SRIM version ---> SRIM-2008.04
+              Calc. date   ---> August 23, 2018 
+ ==================================================================
+
+ Disk File Name = SRIM Outputs\Silver in Au-Ag-Te-CC1-lowE
+
+ Ion = Silver [47] , Mass = 106.905 amu
+
+ Target Density =  8.1600E+00 g/cm3 = 3.4290E+22 atoms/cm3
+ ======= Target  Composition ========
+    Atom   Atom   Atomic    Mass     
+    Name   Numb   Percent   Percent  
+    ----   ----   -------   -------  
+     Au     79    025.00    034.36   
+     Ag     47    008.30    006.25   
+     Te     52    066.70    059.39   
+ ====================================
+ Bragg Correction = 0.00%
+ Stopping Units =  keV / micron   
+ See bottom of Table for other Stopping units 
+
+   Ion        dE/dx      dE/dx     Projected  Longitudinal   Lateral
+  Energy      Elec.      Nuclear     Range     Straggling   Straggling
+-----------  ---------- ---------- ----------  ----------  ----------
+9.99999 eV    2.529E+00  2.702E+01       3 A         3 A         2 A   
+10.9999 eV    2.653E+00  2.881E+01       4 A         3 A         2 A   
+11.9999 eV    2.771E+00  3.055E+01       4 A         3 A         3 A   
+12.9999 eV    2.884E+00  3.223E+01       4 A         3 A         3 A   
+13.9999 eV    2.993E+00  3.387E+01       4 A         3 A         3 A   
+14.9999 eV    3.098E+00  3.547E+01       4 A         4 A         3 A   
+15.9999 eV    3.200E+00  3.702E+01       4 A         4 A         3 A   
+16.9999 eV    3.298E+00  3.854E+01       4 A         4 A         3 A   
+17.9999 eV    3.394E+00  4.003E+01       4 A         4 A         3 A   
+19.9999 eV    3.577E+00  4.292E+01       4 A         4 A         3 A   
+22.4999 eV    3.794E+00  4.638E+01       4 A         4 A         3 A   
+24.9999 eV    3.999E+00  4.969E+01       5 A         4 A         3 A   
+27.4999 eV    4.195E+00  5.288E+01       5 A         4 A         3 A   
+29.9999 eV    4.381E+00  5.596E+01       5 A         5 A         4 A   
+32.4999 eV    4.560E+00  5.894E+01       5 A         5 A         4 A   
+34.9999 eV    4.732E+00  6.183E+01       5 A         5 A         4 A   
+37.4999 eV    4.898E+00  6.464E+01       5 A         5 A         4 A   
+39.9999 eV    5.059E+00  6.737E+01       5 A         5 A         4 A   
+44.9999 eV    5.366E+00  7.264E+01       6 A         5 A         4 A   
+49.9999 eV    5.656E+00  7.768E+01       6 A         5 A         4 A   
+54.9999 eV    5.932E+00  8.252E+01       6 A         6 A         4 A   
+59.9999 eV    6.196E+00  8.717E+01       6 A         6 A         4 A   
+64.9999 eV    6.449E+00  9.167E+01       6 A         6 A         5 A   
+69.9999 eV    6.692E+00  9.603E+01       7 A         6 A         5 A   
+79.9999 eV    7.154E+00  1.044E+02       7 A         6 A         5 A   
+89.9999 eV    7.588E+00  1.123E+02       7 A         7 A         5 A   
+99.9999 eV    7.999E+00  1.198E+02       8 A         7 A         5 A   
+-----------------------------------------------------------
+ Multiply Stopping by        for Stopping Units
+ -------------------        ------------------
+  1.0000E-01                 eV / Angstrom 
+  1.0000E+00                keV / micron   
+  1.0000E+00                MeV / mm       
+  1.2255E-03                keV / (ug/cm2) 
+  1.2255E-03                MeV / (mg/cm2) 
+  1.2255E+00                keV / (mg/cm2) 
+  2.9163E-01                 eV / (1E15 atoms/cm2)
+  1.5586E-04                L.S.S. reduced units
+ ==================================================================
+ (C) 1984,1989,1992,1998,2008 by J.P. Biersack and J.F. Ziegler

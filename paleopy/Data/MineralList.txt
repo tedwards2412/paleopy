@@ -1,0 +1,64 @@
+[Sylvanite]
+shortname = Syl
+nuclei = Ag, Te, Au
+stoich = 0.5, 4, 1.5
+N_p = 47, 52, 79
+N_n = 60.87, 75.6, 118
+
+U_frac = 0.1e-9
+
+[Sinjarite]
+shortname = Sinj
+nuclei = Ca, H, Cl, O
+stoich = 1, 4, 2, 2
+N_p = 20, 1, 17, 8
+N_n = 20, 0, 18.45, 8
+
+U_frac = 0.01e-9
+
+[Olivine]
+shortname = Oliv
+nuclei = Mg, Fe, Si, O
+stoich = 1.6, 0.4, 1, 4
+N_p = 12, 26, 14, 8
+N_n = 12.3, 29.85, 14, 8
+
+U_frac = 0.1e-9
+
+[Gypsum]
+shortname = Gyp
+nuclei = Ca, H, S, O
+stoich = 1, 4, 1, 6
+N_p = 20, 1, 16, 8
+N_n = 20, 0, 16, 8
+
+U_frac = 0.01e-9
+
+[Phlogopite]
+shortname = Phlo
+nuclei = K, Mg, Al, Si, H, O, F
+stoich = 1, 3, 1, 3, 1, 11, 1
+N_p = 19, 12, 13, 14, 1, 8, 9
+N_n = 20, 12.3, 14, 14, 0, 8, 10
+
+U_frac = 0.01e-9
+
+[Halite]
+shortname = Hal
+nuclei = Na, Cl
+stoich = 1, 1
+N_p = 11, 17
+N_n = 12, 18.45
+
+U_frac = 0.01e-9
+
+[Nchwaningite]
+shortname = Nchw
+nuclei = Mn, Si, O, H
+stoich = 2, 1, 6, 4
+N_p = 25, 14, 8, 1
+N_n = 30, 14, 8, 0
+
+U_frac = 0.1e-9
+
+
