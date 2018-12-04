@@ -1,3 +1,3 @@
 # Paleopy
 
-    pip3 install https://github.com/tedwards2412/paleopy
+    pip3 install git+https://github.com/tedwards2412/paleopy

@@ -238,7 +238,7 @@ class Mineral:
         
     def loadNeutronBkg(self):
         
-        fname = "Data/bkgninduced/" + self.name + "_ninduced_wan.dat"
+        fname = "Data/" + self.name + "_ninduced_wan.dat"
         print(fname)
 
         #Read in the column headings so you know which element is which
