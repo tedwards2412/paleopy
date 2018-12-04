@@ -12,8 +12,9 @@ import configparser
 from tqdm import tqdm
 import swordfish as sf
 from WIMpy import DMUtils as DMU
+import os 
 
-
+dir_path = os.path.dirname(os.path.realpath(__file__))
 
 class Mineral:
     def __init__(self, mineral):
@@ -24,7 +25,7 @@ class Mineral:
         
         
         config = configparser.ConfigParser()
-        config.read("Data/MineralList.txt")
+        config.read(dir_path + "Data/MineralList.txt")
         data = config[mineral]
     
         nuclist = data["nuclei"].split(",")
@@ -94,7 +95,7 @@ class Mineral:
         #The modifier can be used to identify a particular version of the SRIM
         #track length files (e.g. modifier="CC2338")
         
-        SRIMfolder = "Data/dRdESRIM/"
+        SRIMfolder = dir_path + "Data/dRdESRIM/"
 
         self.Etox_interp = []
         self.xtoE_interp = []
@@ -238,7 +239,7 @@ class Mineral:
         
     def loadNeutronBkg(self):
         
-        fname = "Data/" + self.name + "_ninduced_wan.dat"
+        fname = dir_path + "Data/" + self.name + "_ninduced_wan.dat"
         print(fname)
 
         #Read in the column headings so you know which element is which
