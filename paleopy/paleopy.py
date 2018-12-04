@@ -381,7 +381,7 @@ def GetSignal(mineral, sigma, m_DM, xsec, x_bins=None, eta=None, vel_dis=False):
     N_bins = len(x_bins) - 1
     
     if vel_dis:
-        dRdx_sig = mineral.dRdx(x_bins_all, xsec, m_DM, eta, gaussian=False)
+        dRdx_sig = mineral.dRdx_generic_vel(x_bins_all, xsec, m_DM, eta, gaussian=False)
     else:
         dRdx_sig = mineral.dRdx(x_bins_all, xsec, m_DM, gaussian=False)
     #dRdx_smooth = gaussian_filter1d(dRdx_sig,sigma, mode='constant',cval = 1e-30)
