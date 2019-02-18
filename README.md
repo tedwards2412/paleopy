@@ -19,5 +19,6 @@ The currently supported minerals are:
 * Olivine
 * Gypsum
 * Phlogopite 
+* Epsomite
 
 See [`Data/MineralList.txt`](Data/MineralList.txt) for more details.

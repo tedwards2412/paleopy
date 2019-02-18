@@ -61,4 +61,13 @@ N_n = 30, 14, 8, 0
 
 U_frac = 0.1e-9
 
+[Epsomite]
+shortname = Eps
+nuclei = Mg, S, O, H
+stoich = 1, 1, 11, 14
+N_p = 12, 16, 8, 1
+N_n = 12.3, 16, 8, 0
+
+U_frac = 0.01e-9
+
 
