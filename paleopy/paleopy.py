@@ -207,8 +207,8 @@ class Mineral:
     
         if components:
             dRdx = []
-            dRdx_temp = np.zeros_like(x)
             for j, nu_source in enumerate(nu_list):
+                dRdx_temp = np.zeros_like(x)
                 for i, nuc in enumerate(self.nuclei):
                     if (nuc != "H"):
                         xtemp = self.Etox_nuclei[nuc](E_list)
@@ -390,9 +390,9 @@ def GetSignal(mineral, sigma, m_DM, xsec, x_bins=None, eta=None, vel_dis=False):
     Nevents_sig = np.zeros(N_bins)
     
     for i in range(N_bins):
-        xmean = 0.5*(x_bins[i] + x_bins[i+1])
-        x1 = xmean - 5.0*sigma
-        x2 = xmean + 5.0*sigma
+        # xmean = 0.5*(x_bins[i] + x_bins[i+1])
+        x1 = x_bins[i] - 5.0*sigma
+        x2 = x_bins[i+1] + 5.0*sigma
         x1 = np.clip(x1, 0.1, 1e5)
         #x1 = x_bins[i]
         #x2 = x_bins[i+1]
