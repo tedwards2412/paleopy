@@ -203,7 +203,7 @@ class Mineral:
         #Returns in events/kg/Myr/nm
         nu_list = ['DSNB', 'atm', 'hep', '8B', '15O', '17F', '13N', 'pep','pp','7Be-384','7Be-861']
     
-        E_list = np.logspace(-2, 3, 1000) # keV
+        E_list = np.logspace(-3, 3, 1000) # keV
     
         if components:
             dRdx = []
@@ -393,7 +393,7 @@ def GetSignal(mineral, sigma, m_DM, xsec, x_bins=None, eta=None, vel_dis=False):
         # xmean = 0.5*(x_bins[i] + x_bins[i+1])
         x1 = x_bins[i] - 5.0*sigma
         x2 = x_bins[i+1] + 5.0*sigma
-        x1 = np.clip(x1, 0.1, 1e5)
+        # x1 = np.clip(x1, 0.1, 1e5)
         #x1 = x_bins[i]
         #x2 = x_bins[i+1]
         integ = lambda y: dRdx_interp(y)*window(y, x_bins[i], x_bins[i+1], sigma)
