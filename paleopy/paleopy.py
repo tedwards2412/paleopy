@@ -203,7 +203,7 @@ class Mineral:
         #Returns in events/kg/Myr/nm
         nu_list = ['DSNB', 'atm', 'hep', '8B', '15O', '17F', '13N', 'pep','pp','7Be-384','7Be-861']
     
-        E_list = np.logspace(-3, 3, 1000) # keV
+        E_list = np.logspace(-3, 3, 5000) # keV
     
         if components:
             dRdx = []
