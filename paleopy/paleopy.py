@@ -147,7 +147,7 @@ class Mineral:
         ax1.set_xlabel("x [nm]")
         ax1.legend()
                 
-        E_list = np.logspace(-1, 3, 500) # keV    
+        E_list = np.logspace(-3, 3, 500) # keV    
         
         for i in range(self.N_nuclei):
             ax2.loglog(E_list, self.Etox_interp[i](E_list),label=self.nuclei[i])
@@ -155,6 +155,7 @@ class Mineral:
         ax2.set_xlabel("E [keV]")
         ax2.legend()
         
+        plt.savefig(self.name + 'SRIM.pdf', bbox_inches='tight')
         plt.show()
         
         
