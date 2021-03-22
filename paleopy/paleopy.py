@@ -346,10 +346,12 @@ def GetBackground(mineral, sigma, x_bins=None):
         
         N_events_ind = np.zeros(N_bins)
         for i in range(N_bins):
-            xmean = 0.5*(x_bins[i] + x_bins[i+1])
-            x1 = xmean - 5.0*sigma
-            x2 = xmean + 5.0*sigma
-            x1 = np.clip(x1, 0.1, 1e5)
+            # xmean = 0.5*(x_bins[i] + x_bins[i+1])
+            # x1 = xmean - 5.0*sigma
+            # x2 = xmean + 5.0*sigma
+            x1 = x_bins[i] - 5.0*sigma
+            x2 = x_bins[i+1] + 5.0*sigma
+            # x1 = np.clip(x1, 0.1, 1e5)
             #print(xmean, x1, x2)
             integ = lambda y: dRdx_interp(y)*window(y, x_bins[i], x_bins[i+1], sigma)
             #print(integ(xmean))
